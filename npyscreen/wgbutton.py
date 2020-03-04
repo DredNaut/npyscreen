@@ -96,6 +96,8 @@ class MiniButtonPress(MiniButton):
                 curses.ascii.SP:    self.h_toggle,
                 curses.KEY_DOWN:     self.h_exit_down,
                 curses.KEY_UP:       self.h_exit_up,
+                curses.ascii.NL:     self.h_exit_down,
+                curses.ascii.CR:     self.h_exit_down,
             })
         
     def destroy(self):
