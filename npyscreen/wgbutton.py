@@ -24,7 +24,7 @@ class MiniButton(checkbox._ToggleControl):
             self.color = 'CONTROL'
         
     def set_up_handlers(self):
-        super(MiniButtonPress, self).set_up_handlers()
+        super(MiniButton, self).set_up_handlers()
         
         self.handlers.update({
                 curses.KEY_ENTER:    self.h_toggle,
