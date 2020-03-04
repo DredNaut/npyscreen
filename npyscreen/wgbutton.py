@@ -23,6 +23,16 @@ class MiniButton(checkbox._ToggleControl):
         else:
             self.color = 'CONTROL'
         
+    def set_up_handlers(self):
+        super(MiniButton, self).set_up_handlers()
+        
+        self.handlers.update({
+                curses.KEY_ENTER: self.h_toggle,
+                curses.ascii.SP:    self.h_toggle,
+                curses.KEY_DOWN:     self.h_exit_down,
+                curses.KEY_UP:       self.h_exit_up,
+            })
+        
     def calculate_area_needed(self):
         return 1, self.label_width+2
 
