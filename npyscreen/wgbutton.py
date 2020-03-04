@@ -82,8 +82,7 @@ class MiniButtonPress(MiniButton):
         super(MiniButtonPress, self).set_up_handlers()
         
         self.handlers.update({
-                curses.ascii.NL: self.h_toggle,
-                curses.ascii.CR: self.h_toggle,
+                curses.KEY_ENTER: self.h_toggle,
             })
         
     def destroy(self):
