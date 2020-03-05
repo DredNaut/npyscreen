@@ -94,7 +94,6 @@ class MiniButtonPress(MiniButton):
         super(MiniButtonPress, self).set_up_handlers()
         
         self.handlers.update({
-                curses.KEY_ENTER:    self.h_toggle,
                 curses.ascii.SP:     self.h_toggle,
                 curses.KEY_DOWN:     self.h_exit_down,
                 curses.KEY_UP:       self.h_exit_up,
